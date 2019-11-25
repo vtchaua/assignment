@@ -1,0 +1,43 @@
+.tieude img {
+    width: 75%;
+    display: block; margin-left: auto; margin-right: auto;
+  }
+  .menu {
+
+    height: 2.6em;
+    width: 100%;
+    margin-left: 25%;
+  }
+.user button {
+    color: blue;
+    background-color:white;
+    border: none;
+}
+.user {
+    margin: 0.15em 0 0 0;
+}
+.search {
+    margin: 0.1em 0 0 0;
+}
+.search div {
+    height: 2.4em;
+}
+.container {
+    margin: 1em 0 0 30%;
+    width: 40%;
+    background-color: beige;
+    border-radius: 10px;
+    height: 31.5em;
+}
+.container h1{
+    color: red;
+}
+.form-control { 
+    margin-bottom: 10px;
+}
+.login-screen-bg {  
+    background-color: #EFEFEF;
+}
+.change {
+    width: 100%;
+}

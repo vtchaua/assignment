@@ -1,0 +1,28 @@
+.tieude img {
+    width: 75%;
+    display: block; margin-left: auto; margin-right: auto;
+  }
+  .menu {
+
+    height: 2.6em;
+    width: 100%;
+    margin-left: 25%;
+  }
+.myDropdown button {
+    color: blue;
+    background-color:white;
+    border: none;
+}
+.contrainer {
+    width: 70%;
+    margin: 0 0 0 15%;
+    text-align: center;
+    display: table;
+}
+
+.contrainer h3 {
+    margin: 0.5em 0 0.5em 0;
+}
+.contrainer h4 {
+    margin: 1em 0 0.5em 0;
+}

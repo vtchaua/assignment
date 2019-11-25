@@ -1,0 +1,58 @@
+<div class = "body">
+        <div class="tieude">
+            <img src="assets\images\banner.png">
+        </div>
+        <div class="row menu">
+            <div class="col-xs-8 col-md-5">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" [routerLink]="['/assignment']">Online training</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/gioithieu']">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/lienhe']">Liên hệ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/gopy']">Góp ý</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/hoidap']">Hỏi đáp</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="col-xs-2 col-md-1">
+                <div class="dropdown dropleft myDropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Tài khoản
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" [routerLink]="['/dangki']">Đăng kí</a>
+                        <a class="dropdown-item" [routerLink]="['/dangnhap']">Đăng nhập</a>
+                        <a class="dropdown-item" [routerLink]="['/doimatkhau']">Quên mật khẩu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="container">
+        <h3>Thông tin liên hệ:</h3>
+        <h6>Online training</h6>
+        <h6>Số điện thoại hỗ trợ: 0334371730 | Email hỗ trợ: chauavo@gmail.com</h6>
+        <h6>Địa chỉ: số 12 Trịnh Đình Thảo, phường Hòa Thạnh, quận Tân Phú, TP.HCM</h6>
+        <form>
+            <div class="form-group hopthu">
+                <label for="exampleInputEmail1">Hộp thư hỗ trợ</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Tiêu đề">
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Họ và Tên">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Số điện thoại">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Nội dung"></textarea>
+               
+                <button type="button" class="btn btn-primary btn-sm">Gửi thông tin</button>
+            </div>
+        </form>
+    </div>       
+</div>
+    

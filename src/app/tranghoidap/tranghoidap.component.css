@@ -1,0 +1,32 @@
+.tieude img {
+  width: 75%;
+  display: block; margin-left: auto; margin-right: auto;
+}
+.menu {
+
+  height: 2.6em;
+  width: 100%;
+  margin-left: 25%;
+}
+.myDropdown button {
+  color: blue;
+  background-color:white;
+  border: none;
+}
+  .myCard {
+    float: left;
+    width: 23%;
+    margin: 1em 1% 0 1%;
+    height: 21.5em;
+  }
+  .myCard img {
+    height: 12em;
+  }
+  .chantrang {
+    margin: 46em 1% 0 0;
+  }
+  .container {
+    width: 50%;
+    margin: 1em 0 0 25%;
+  }
+  

@@ -1,0 +1,113 @@
+<div class = "body">
+        <div class="tieude">
+            <img src="assets\images\banner.png">
+        </div>
+        <div class="row menu">
+            <div class="col-xs-8 col-md-5">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" [routerLink]="['/assignment']">Online training</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/gioithieu']">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/lienhe']">Liên hệ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/gopy']">Góp ý</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/hoidap']">Hỏi đáp</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="col-xs-2 col-md-1">
+                <div class="dropdown dropleft user">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Tài khoản
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" [routerLink]="['/taikhoan']">Cập nhật tài khoản</a>
+                        <a class="dropdown-item" [routerLink]="['/doimatkhau']">Quên mật khẩu</a>
+                        <a class="dropdown-item" [routerLink]="['/dangnhap']" (click) = 'dangxuat()'>Đăng xuất</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="contrainer">
+        <div class="containerleft">
+            <div class="top">
+                <div class="card border-success myCard">
+                    <div class="card-header bg-transparent border-success">
+                        Điểm: {{mark}}
+                    </div>
+                    <div class="card-body text-success myCardBody" *ngFor="let i of Quiz | paginate: {itemsPerPage: pagesize, currentPage: pagecurrent}">
+                        <p>Câu {{pagecurrent}}: {{i.Text}}</p>
+                        <div class="form-check" *ngFor = 'let j of i.Answers'>
+                            <input class="form-check-input" type="radio" name={{i.Id}} value={{j.Id}} [(ngModel)]="task.Ans[pagecurrent -1]" [ngModelOptions]="{standalone: true}">
+                            <label class="form-check-label" for="exampleRadios1">
+                                {{j.Text}}
+                            </label>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent border-success text-center">
+                        <div class="bottom">
+                            <i class='far fa-hand-point-up' style="font-size: 150%" (click) = 'home()' *ngIf = "showfirth"></i>
+                            <i class='far fa-hand-point-right' style="font-size: 150%" (click) = 'next()' *ngIf = "showend"></i>
+                            <i class='far fa-hand-point-down' style="font-size: 150%" (click) = 'end()' *ngIf = "showlast"></i>
+                            <i class='far fa-hand-point-left' style="font-size: 150%" (click) = 'previrous()' *ngIf = "showbegin"></i>
+
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" (click) = 'finish()' *ngIf = 'showfinish'>
+                                Hoàn thành
+                            </button>
+                
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" *ngIf = "show">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Hoàn thành bài thi</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Điểm của bạn là: {{mark}}
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal">Tiếp tục</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="containerright myHeader">
+            <div class="accordion myHeader" id="accordionExample">
+                <div class="card myHeader">
+                    <div class="card-header myHeader" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link dmmh" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <i class='fas fa-th-large'></i>Danh mục môn học
+                            </button>
+                        </h2>
+                    </div>                    
+                    <div id="collapseOne" class="collapse myCollapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <ul class="list-group" *ngFor = "let i of danhmucmonhoc">
+                                <a [routerLink]="['/danhmucmonhoc', i.Id]" (click) = 'thi()'><li class="list-group-item">{{i.Name}}</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    

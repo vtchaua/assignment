@@ -1,0 +1,65 @@
+
+.tieude img {
+    width: 75%;
+    display: block; margin-left: auto; margin-right: auto;
+  }
+  .menu {
+
+    height: 2.6em;
+    width: 100%;
+    margin-left: 25%;
+  }
+.user button {
+    color: blue;
+    background-color:white;
+    border: none;
+}
+.user {
+    margin: 0.15em 0 0 0;
+}
+.search {
+    margin: 0.1em 0 0 0;
+}
+.containerleft {
+    width: 65%;
+    margin-top: 1em;
+    float: left;
+}
+.containerright {
+    width: 30%;
+    float: left;
+    margin-left: 5%;
+    margin-top: 1em;
+    font-weight: bold;
+}
+.myCard {
+    width: 40%;
+    margin: 0 0 2em 9%;
+    float: left;
+    height: 18em;
+}
+.top {
+    height: 40em;
+}
+.bottom {
+    height: 2em;
+    text-align: center;
+    margin: 0 0 0 8%;
+}
+.bottom i {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 5%;
+    height: 1.5em;
+    padding: 0.2em 0 0 0;
+}
+.bottom i:hover {
+    background-color: chocolate;
+}
+
+.dmmh i {
+    margin: 0 2% 0 0;
+}
+.click:hover {
+    color: blue;
+}

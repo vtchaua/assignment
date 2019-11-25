@@ -1,0 +1,96 @@
+<div class = "body">
+        <div class="tieude">
+            <img src="assets\images\banner.png">
+        </div>
+        <div class="row menu">
+            <div class="col-xs-8 col-md-5">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" [routerLink]="['/assignment']">Online Training</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/gioithieu']">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/lienhe']">Liên hệ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/gopy']">Góp ý</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/hoidap']">Hỏi đáp</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="col-xs-2 col-md-1">
+                <div class="dropdown dropleft user">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Tài khoản
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" [routerLink]="['/dangki']">Đăng kí</a>
+                        <a class="dropdown-item" [routerLink]="['/doimatkhau']">Quên mật khẩu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container"> 
+            <h1>Đăng nhập vào tài khoản:</h1>
+            <form class="form" role="form"> 
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Nhập tên tài khoản:</label>
+                    <input class="form-control" name="account" placeholder="User name" type="text" [(ngModel)]="taikhoan" [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Nhập mật khẩu:</label>
+                    <input class="form-control" name="password" placeholder="Password" type="password" [(ngModel)]="matkhau" [ngModelOptions]="{standalone: true}">
+                </div>
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary signin" data-toggle="modal" data-target="#exampleModal" (click) = 'dangnhap()'>
+                        Đăng nhập
+                </button>
+      
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" *ngIf = "show">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Đăng nhập thành công</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                Xin chào {{fullname}}
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" [routerLink]="['/danhmucmonhoc']" data-dismiss="modal">Tiếp tục</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" *ngIf = "!show">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Đăng nhập thất bại</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                Sai tên tài khoản hoặc mật khẩu!
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Đăng nhập lại</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+    </div>
+</div>
+        
